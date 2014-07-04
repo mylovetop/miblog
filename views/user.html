@@ -2,8 +2,23 @@
 <html>
 <body>
 <h1>欢迎，<%=user.name%></h1>
+<p>
+    数据库youyiku的表user_info表结构字段
+</p>
+
 <%for(var i = 0; i < list.length; i++){%>
-<h2><%=list[i]%></h2>
+<hr/>
+<h2>
+    <p>
+        name: <%=list[i].name%>
+    </p>
+    <p>
+        password: <%=list[i].password%>
+    </p>
+    <p>
+        id: <%=list[i].id%>
+    </p>
+</h2>
 <%}%>
 </body>
 

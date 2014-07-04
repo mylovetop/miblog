@@ -13,7 +13,8 @@ router.get('/', function(req, res) {
     connection.query('SELECT * FROM youyiku.user_info', function(err, rows, fields) {
       console.log('mysql 连接开始');
       if (err) throw err;
-      var list = ['123', '3333', '4444', '这是什么'];
+//      var list = ['123', '3333', '4444', '这是什么'];
+      var list = rows;
       res.render('user',{
         user:
         {
@@ -21,7 +22,9 @@ router.get('/', function(req, res) {
         },
         list:list
       });
-      console.log('The solution is: ', rows[0].solution);
+
+      console.log('The solution is: ', rows);
+      console.log('The solution is: ', rows[0]);
       console.log('The solution is: ', fields);
     });
 
