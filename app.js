@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var ejs = require('ejs');
+var process = require('process');
 
 var routes = require('./routes/index');
 //var users = require('./routes/users');
@@ -66,6 +67,11 @@ app.use(function(err, req, res, next) {
         message: err.message,
         error: {}
     });
+});
+
+
+process.on('uncaughtException', function (err) {
+  logger.error(err);
 });
 
 

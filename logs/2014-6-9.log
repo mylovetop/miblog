@@ -1,0 +1,13 @@
+[2014-07-09 10:46:56.353] [FATAL] 2014-6-9 - 严重
+[2014-07-09 11:02:06.830] [FATAL] /Users/zdsoft/Desktop/demo/nodejs/miblog - 严重
+[2014-07-09 11:08:44.329] [ERROR] [object Object] - users-------[object Object],[object Object]
+[2014-07-09 11:08:44.331] [ERROR] [object Object] - 33
+[2014-07-09 11:08:44.331] [FATAL] [object Object] - 严重
+[2014-07-09 11:08:44.333] [DEBUG] [object Object] - WxIndexCtrl初始化
+[2014-07-09 11:11:07.256] [ERROR] routes/users - users-------[object Object],[object Object]
+[2014-07-09 11:11:07.258] [ERROR] routes/users - 33
+[2014-07-09 11:11:07.259] [FATAL] routes/users - 严重
+[2014-07-09 11:11:07.260] [DEBUG] routes/users - WxIndexCtrl初始化
+[2014-07-09 11:12:43.802] [ERROR] routes/users - users-------[object Object],[object Object]
+[2014-07-09 11:12:43.804] [ERROR] routes/users - 33
+[2014-07-09 11:12:43.805] [FATAL] routes/users - 严重
