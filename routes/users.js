@@ -3,10 +3,10 @@ var router          = express.Router();
 var path            = require('path');
 var userDao         = require(path.resolve('./lib/dao/user-dao'));
 var logger          = require(path.resolve('./lib/util/logger'));
-var isLogin         = require(path.resolve('./util/filter/isLogin'));
+var isLogin         = require(path.resolve('./lib/util/filter/isLogin'));
 
 /* GET users listing. */
-router.get('/', isLogin, function(req, res) {
+router.get('/', isLogin.authorize, function(req, res) {
   logger.init(__filename);
   logger.error('错误');
 
