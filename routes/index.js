@@ -12,7 +12,9 @@ router.get('/', function(req, res){
   console.log(req.query.name);
   logger.init(__filename);
 
-  res.render('index', {userUrl:rewriteUrl('users', constant.urlType)});
+  res.render('index', {
+    userUrl:rewriteUrl('users', constant.urlType)
+  });
 });
 
 module.exports = router;

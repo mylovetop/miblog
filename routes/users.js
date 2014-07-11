@@ -11,9 +11,6 @@ router.get('/', isLogin.authorize, function(req, res) {
   logger.error('错误');
 
 
-
-
-
   function callbackSuccess(rows){
       res.render('user',{
         user:
@@ -26,7 +23,7 @@ router.get('/', isLogin.authorize, function(req, res) {
 
   function callbackError(err){
     logger.error(err.message);
-  }
+  };
 
   var u = new userDao();
   u.queryUserInfo(callbackError, callbackSuccess);
