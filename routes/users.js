@@ -3,20 +3,24 @@ var router          = express.Router();
 var path            = require('path');
 var userDao         = require(path.resolve('./lib/dao/user-dao'));
 var logger          = require(path.resolve('./lib/util/logger'));
-
+var isLogin         = require(path.resolve('./util/filter/isLogin'));
 
 /* GET users listing. */
-router.get('/', function(req, res) {
-  logger.init('routes/users');
+router.get('/', isLogin, function(req, res) {
+  logger.init(__filename);
+  logger.error('错误');
+
+
+
+
 
   function callbackSuccess(rows){
-    var list = rows;
       res.render('user',{
         user:
         {
           name:req.query.user
         },
-        list:list
+        list:rows
       });
   };
 
@@ -24,7 +28,8 @@ router.get('/', function(req, res) {
     logger.error(err.message);
   }
 
-  (new userDao()).queryUserInfo(callbackError, callbackSuccess);
+  var u = new userDao();
+  u.queryUserInfo(callbackError, callbackSuccess);
 
 });
 

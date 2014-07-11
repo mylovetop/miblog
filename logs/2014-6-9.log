@@ -11,3 +11,13 @@
 [2014-07-09 11:12:43.802] [ERROR] routes/users - users-------[object Object],[object Object]
 [2014-07-09 11:12:43.804] [ERROR] routes/users - 33
 [2014-07-09 11:12:43.805] [FATAL] routes/users - 严重
+[2014-07-09 11:19:51.779] [ERROR] [/Users/zdsoft/Desktop/demo/nodejs/miblog/routes] - 错误
+[2014-07-09 11:22:16.001] [ERROR] [/Users/zdsoft/Desktop/demo/nodejs/miblog/routes/users.js] - 错误
+[2014-07-09 13:56:32.378] [ERROR] [/Users/zdsoft/Desktop/demo/nodejs/miblog/routes/login.js] - 错误---login
+[2014-07-09 13:56:47.697] [ERROR] [/Users/zdsoft/Desktop/demo/nodejs/miblog/routes/users.js] - 错误
+[2014-07-09 16:57:30.278] [ERROR] [/Users/zdsoft/Desktop/demo/nodejs/miblog/routes/login.js] - 错误---login
+[2014-07-09 17:00:04.779] [ERROR] [/Users/zdsoft/Desktop/demo/nodejs/miblog/routes/login.js] - 错误---login
+[2014-07-09 17:00:04.779] [ERROR] [/Users/zdsoft/Desktop/demo/nodejs/miblog/routes/login.js] - 错误---login
+[2014-07-09 17:00:05.992] [ERROR] [/Users/zdsoft/Desktop/demo/nodejs/miblog/routes/users.js] - 错误
+[2014-07-09 17:08:33.375] [ERROR] [/Users/zdsoft/Desktop/demo/nodejs/miblog/routes/users.js] - 错误
+[2014-07-09 17:08:33.375] [ERROR] [/Users/zdsoft/Desktop/demo/nodejs/miblog/routes/users.js] - 错误

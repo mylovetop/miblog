@@ -4,12 +4,11 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 var ejs = require('ejs');
 var process = require('process');
 
-var routes = require('./routes/index');
-//var users = require('./routes/users');
-//var login = require('./routes/login');
+var routes = require('./routes/route');
 
 
 var app = express();
@@ -27,16 +26,14 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
+//{secret: 'keyboard cat'} 这个必须加，要不会报错
+app.use(session({secret: 'keyboard cat'}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
 //路由
 routes(app);
 
-//路由
-//app.use('/', routes);
-//app.use('/users', users);
-//app.use('/login', login);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
