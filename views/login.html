@@ -1,13 +1,16 @@
 <!doctype html>
 <html>
     <h1>请登录</h1>
-<form action="<%=action%>">
+<form action="<%=action=>">
     <fieldset>
         <label>用户名</label>
-        <input name="user">
+        <input name="name">
 
         <label>密码</label>
-        <input>
+        <input name="password">
+        <%if(typeOf err != 'undefined' ){%>
+        <div><%=err.err%></div>
+        <%}%>
     </fieldset>
     <button>submit</button>
 </form>

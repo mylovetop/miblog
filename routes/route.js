@@ -15,6 +15,7 @@ var constant        = require(path.resolve('./lib/util/constant'));
 //路由
 var users = require('./users');
 var login = require('./login');
+var loginDo = require('./login-do');
 var e404 = require('./e404');
 
 var home = require('./index');
@@ -30,6 +31,7 @@ module.exports = function(app){
 
   app.use(rewriteUrl('/users', constant.urlType), users);
   app.use(rewriteUrl('/login', constant.urlType), login);
+  app.use(rewriteUrl('/loginDo', constant.urlType), loginDo);
 
   //找不到页面
   app.use(rewriteUrl('/404', constant.urlType), e404);

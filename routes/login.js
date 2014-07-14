@@ -9,8 +9,10 @@ router.get('/', function(req, res){
   console.log(req.query.name);
   logger.init(__filename);
 
+  var err = req.session.err;
   res.render('login', {
-    action: rewriteUrl('users', constant.urlType)
+    action: rewriteUrl('loginDo', constant.urlType)
+//    err: err
   });
 
   logger.error('错误---login');
