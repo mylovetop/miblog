@@ -1,17 +1,28 @@
 <!doctype html>
 <html>
     <h1>请登录</h1>
-<form action="<%=action=>">
-    <fieldset>
-        <label>用户名</label>
-        <input name="name">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/style/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/style/bootstrap/bootstrap-theme.css">
+    <script src="/js/lib/jquery-2.1.1.min.js"></script>
 
-        <label>密码</label>
-        <input name="password">
-        <%if(typeOf err != 'undefined' ){%>
-        <div><%=err.err%></div>
-        <%}%>
-    </fieldset>
-    <button>submit</button>
-</form>
+
+</head>
+<body>
+    <form action="<%=action%>">
+        <fieldset>
+            <label>用户名</label>
+            <input name="name">
+
+            <label>密码</label>
+            <input name="password">
+            <%if(err != null ){%>
+            <div><%=err.err%></div>
+            <%}%>
+        </fieldset>
+        <button>submit</button>
+    </form>
+</body>
 </html>

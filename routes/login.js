@@ -10,12 +10,13 @@ router.get('/', function(req, res){
   logger.init(__filename);
 
   var err = req.session.err;
-  res.render('login', {
-    action: rewriteUrl('loginDo', constant.urlType)
-//    err: err
-  });
 
-  logger.error('错误---login');
+  res.render('login', {
+    action: rewriteUrl('loginDo', constant.urlType),
+    err: err
+  });
+  req.session.err = null;
+
 });
 
 module.exports = router;
