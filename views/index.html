@@ -5,21 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="/style/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="/style/bootstrap/bootstrap-theme.css">
-    <script data-main="/js/app.js" src="js/require.js"></script>
-    <script>
-//        requirejs.config({
-//            baseUrl: 'js/lib',
-//            paths:{
-//                app:'../app',
-//                jquery: 'jquery-2.1.1.min',
-//                bootstrap: 'bootstrap'
-//            }
-//        });
-//
-//        requirejs(['jquery', 'bootstrap'], function($, bootstrap){
-//            alert("requires 加载");
-//        });
-    </script>
+    <script data-main="js/main" src="js/require.js"></script>
 
 </head>
 <body>
@@ -27,6 +13,6 @@
     来说说 做生意那些事
 </div>
 
-<a href="<%=userUrl%>">查看用户信息</a>
+<a id="id_info" href="<%=userUrl%>">查看用户信息</a>
 </body>
 </html>

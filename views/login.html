@@ -6,15 +6,16 @@
     <title></title>
     <link rel="stylesheet" href="/style/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="/style/bootstrap/bootstrap-theme.css">
-    <script src="/js/lib/jquery-2.1.1.min.js"></script>
 
+    <script data-main="js/app/login.js" src="js/require.js" ></script>
+    <!--<script  src="js/app/login.js"></script>-->
 
 </head>
 <body>
     <form action="<%=action%>">
         <fieldset>
             <label>用户名</label>
-            <input name="name">
+            <input id="id_name" name="name" placeholder="请输入" value="jquery">
 
             <label>密码</label>
             <input name="password">
@@ -25,4 +26,5 @@
         <button>submit</button>
     </form>
 </body>
+
 </html>
