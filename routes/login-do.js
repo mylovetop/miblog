@@ -18,24 +18,34 @@ router.get('/', function(req, res){
   logger.init(__filename);
 
 
-  function callbackError(err, params){
+  var u = new UserDao();
+  var params = {};
+  params.userName = userName;
+  params.password = password;
+  var p = u.login2(params);
+
+
+//  p.then(function(rows){
+//    req.session.userId = params.userName;
+//    res.redirect(rewriteUrl('users', constant.urlType));
+//  },function(err){
+//    logger.error(err);
+//    req.session.err = {
+//      err:constant.KEY_ERROR_LOGIN
+//    };
+//    res.redirect(rewriteUrl('login', constant.urlType));
+//  });
+
+  p.then(function(rows){
+    req.session.userId = params.userName;
+    res.redirect(rewriteUrl('users', constant.urlType));
+  }).then(function(err){
     logger.error(err);
     req.session.err = {
       err:constant.KEY_ERROR_LOGIN
     };
     res.redirect(rewriteUrl('login', constant.urlType));
-  }
-
-  function callbackSuccess(rows, params){
-    req.session.userId = params.userName;
-    res.redirect(rewriteUrl('users', constant.urlType));
-  };
-
-  var u = new UserDao();
-  var params = {};
-  params.userName = userName;
-  params.password = password;
-  u.login(callbackError, callbackSuccess, params);
+  });
 
 
 });

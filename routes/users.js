@@ -28,6 +28,8 @@ router.get('/', isLogin.authorize, function(req, res) {
   var u = new userDao();
   u.queryUserInfo(callbackError, callbackSuccess);
 
+
+
 });
 
 module.exports = router;

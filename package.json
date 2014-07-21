@@ -20,6 +20,7 @@
     "process": "0.7.0",
     "log4js": "0.6.15",
     "express-session": "1.6.4",
-    "canvas": "1.1.5"
+    "canvas": "1.1.5",
+    "q": "1.0.1"
   }
 }
