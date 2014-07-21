@@ -39,8 +39,10 @@ router.get('/', function(req, res){
   p.then(function(rows){
     req.session.userId = params.userName;
     res.redirect(rewriteUrl('users', constant.urlType));
-  }).then(function(err){
-    logger.error(err);
+  }).fail(function(err){
+    if(null == err)
+      logger.error(err);
+
     req.session.err = {
       err:constant.KEY_ERROR_LOGIN
     };
