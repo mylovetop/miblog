@@ -8,10 +8,13 @@ var isLogin         = require(path.resolve('./lib/util/filter/isLogin'));
 /* GET users listing. */
 router.get('/', isLogin.authorize, function(req, res) {
   logger.init(__filename);
-  logger.error('错误');
 
 
-  function callbackSuccess(rows){
+  var u = new userDao();
+  var promise = u.queryUserInfo();
+
+  promise
+    .then(function(rows){
       res.render('user',{
         user:
         {
@@ -19,14 +22,10 @@ router.get('/', isLogin.authorize, function(req, res) {
         },
         list:rows
       });
-  };
-
-  function callbackError(err){
-    logger.error(err.message);
-  };
-
-  var u = new userDao();
-  u.queryUserInfo(callbackError, callbackSuccess);
+    })
+    .fail(function(err){
+      logger.error(err.message);
+    });
 
 
 
